@@ -1,0 +1,5 @@
+{
+  "name": "Google Image to Notion",
+  "description": "구글 이미지 검색 결과를 활용하여 제목과 작가 정보를 입력하고 노션 데이터베이스에 즉시 저장합니다.",
+  "requestFramePermissions": []
+}

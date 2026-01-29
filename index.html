@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Image to Notion Archiver</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            background-color: #f1f5f9;
+            color: #334155;
+            margin: 0;
+            padding: 0;
+        }
+
+        .blue-window {
+            border: 2px solid #BEE3F8;
+            border-radius: 24px;
+            background-color: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 20px 50px -12px rgba(144, 205, 244, 0.3);
+        }
+
+        .blue-header {
+            background-color: #EBF8FF;
+            border-bottom: 2px solid #BEE3F8;
+            padding: 16px 24px;
+        }
+
+        .blue-input {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #f8fafc;
+        }
+
+        .blue-input:focus {
+            border-color: #90CDF4;
+            box-shadow: 0 0 0 4px rgba(144, 205, 244, 0.15);
+            background-color: #ffffff;
+            outline: none;
+        }
+
+        .blue-button-square {
+            width: 44px;
+            height: 44px;
+            border: 1.5px solid #90CDF4;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3182CE;
+            transition: all 0.2s;
+            background-color: #fff;
+        }
+
+        .blue-button-square:hover {
+            background-color: #EBF8FF;
+            transform: translateY(-2px);
+        }
+
+        .blue-button-square:active {
+            transform: scale(0.95);
+        }
+
+        .dotted-line {
+            border-top: 2px dotted #E2E8F0;
+            margin: 20px 0;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #BEE3F8;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        
+        .image-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "htm": "https://esm.sh/htm@^3.1.1",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
